@@ -45,11 +45,14 @@ git commit -m "update config"
 git push
 ```
 
-其他电脑拉取最新配置：
+其他电脑同步最新配置：
+
+> 前提：该电脑已完成上方「在新电脑上使用」的初始化步骤（克隆仓库 + 建立符号链接）。
 
 ```bash
 cd ~/claude-config
 git pull
+# commands/ 通过符号链接已实时生效，无需额外操作
+# 如果 settings.json 有更新，手动执行：
+cp ~/claude-config/settings.json ~/.claude/settings.json
 ```
-
-> 如果使用了符号链接，`commands/` 目录的改动会实时生效，无需手动复制。
